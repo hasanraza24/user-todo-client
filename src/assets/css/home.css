@@ -1,0 +1,225 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: all 1s cubic-bezier(1,0,0.2,1) */
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEFF; 
+    font-family: Nunito;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-weight: 900;
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 5rem;
+    backface-visibility: hidden;
+    color: transparent;
+    background-image: linear-gradient(to right bottom, #FCF515, #F45424);
+    background-clip: text;
+    position: relative;
+    /* animation: fadeBottom .5s ease; */
+  }
+  
+  .container p {
+    width: 75%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    color:#BCBCBC;
+    line-height: 1.6;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.05);
+    font-size: 1.6rem;
+  }
+  
+  p span {
+    display: inline-block;
+    font-weight: 700;
+    border-bottom: 1px dotted #b4b4b4;
+  }
+  
+  .subtitle {
+    /* animation: fade .5s .6s backwards; */
+  }
+  
+  .container {
+    height: 64rem;
+    width: 34rem;
+    background: #fff;
+    box-shadow: 0px 5px 40px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  form, form input {
+    display: block;
+  }
+  
+  form {
+    margin-top: 8rem;
+    position: relative;
+    /* animation: fadeLeft .5s 1.2s backwards; */
+  }
+  
+  input {
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 80%;
+    height: 4rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(74,74,74,0.1);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 2rem;
+    color: #999;
+    font-weight: 700;
+  }
+
+  textarea {
+    margin: auto;
+    display: block;
+    margin-bottom: 2rem;
+    width: 80%;
+    height: 15rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(74,74,74,0.1);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 2rem;
+    color: #999;
+    font-weight: 700;
+  }
+
+  textarea::placeholder, textarea[type=submit] {
+    font-family: Nunito;
+    font-size: 2rem;
+    text-align: center;
+    color: #999;
+    font-weight: 700;
+    color: rgba(74,74,74,0.2);
+  }
+
+  textarea[type=submit] {
+    font-weight: 900;
+    margin-top: 3rem;
+    /* height: 5rem; */
+    color: white;
+    background: linear-gradient(to right bottom, #FCF515, #F45424);
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    text-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    
+    animation: button .5s 1s backwards;
+  }
+  
+  input::placeholder, input[type=submit] {
+    font-family: Nunito;
+    font-size: 2rem;
+    text-align: center;
+    color: #999;
+    font-weight: 700;
+    color: rgba(74,74,74,0.2);
+  }
+  
+  input[type=submit] {
+    font-weight: 900;
+    margin-top: 3rem;
+    height: 5rem;
+    color: white;
+    background: linear-gradient(to right bottom, #FCF515, #F45424);
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    text-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    
+    animation: button .5s 1s backwards;
+  }
+  
+  @keyframes fadeBottom {
+    0% {
+      opacity: 0;
+      bottom: 4rem;
+    }
+    
+    100% {
+      opacity: 1;
+      bottom: 0rem;
+    }
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    
+    70% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeLeft {
+    0% {
+      opacity: 0;
+      right: 100%;
+    }
+    
+    80% {
+      right: -5%;
+    }
+    
+    100% {
+      opacity: 1px;
+      right: 0;
+    }
+  }
+  
+  @keyframes button {
+    0% {
+      opacity: 0;
+      color: transparent;
+      width: 0rem;
+    }
+    
+    30% {
+      opacity: 1;
+      width: 5rem;
+    }
+    
+    70% {
+      width: 80%;
+      color: rgba(255,255,255,0);
+    }
+    
+    100% {
+      color: rgba(255,255,255,1);
+    }
+    
+  }
+  
+  @media(max-width: 700px) {
+    html {
+      font-size: 50%;
+    }
+  }
